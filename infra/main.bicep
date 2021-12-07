@@ -31,3 +31,6 @@ module swa './static_web_app.bicep' = {
     siteName: siteName
   }
 }
+
+output fqdn string = swa.outputs.fqdn
+output webSiteDeploymentToken string = swa.outputs.deploymentToken
