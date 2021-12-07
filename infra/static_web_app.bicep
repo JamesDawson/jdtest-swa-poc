@@ -42,3 +42,6 @@ resource swa 'Microsoft.Web/staticSites@2021-02-01' = {
     }
   }
 }
+
+output fqdn string = swa.properties.defaultHostname
+output deploymentToken string = listSecrets(swa.id, '2019-08-01').properties.apiKey
